@@ -11,6 +11,7 @@
   }
   &__content {
     @media screen and (min-width: $screen-desktop) {
+      @include flex(center, center, column);
       margin-right: 150px;
       max-width: 400px;
     }
@@ -19,6 +20,9 @@
   &__list {
     margin-bottom: 40px;
     cursor: pointer;
+    @media screen and (min-width: $screen-desktop) {
+      margin-bottom: 0;
+    }
   }
   &__item {
     background-color: $subscribe-bg-color;
@@ -41,7 +45,16 @@
     margin-bottom: 20px;
   }
   &__picture {
-       @include flex(center, center ,column);
+    @include flex(center, center, column);
+    position: relative;
+    margin-bottom: 40px;
+    @include padding-hack(100%);
+    @media screen and (min-width: $screen-desktop) {
+      margin-bottom: 0;
+      order: 2;
+      width: 50%;
+      padding-bottom: 40%;
+    }
   }
   &__title {
     display: block;
@@ -51,12 +64,5 @@
     text-align: center;
     color: $white;
     font-size: $logo-fs;
-  }
-  &__img-wraper {
-    @include padding-hack(100%);
-    @media screen and (min-width: $screen-desktop) {
-        width: 90%;
-        padding-bottom: 90%;
-      }
   }
 }

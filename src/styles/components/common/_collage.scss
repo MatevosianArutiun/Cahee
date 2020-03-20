@@ -1,0 +1,115 @@
+.collage {
+    overflow-x: scroll;
+    display: flex;
+    padding-top: 22px;
+    padding-bottom: 32px;
+    width: 100%;
+    touch-action: pan-x;
+    margin-bottom: 50px;
+    @media screen and (min-width: $screen-tablet-small) {
+        overflow-x: auto;
+        touch-action: manipulation;
+        padding-top: 0;
+        padding-bottom: 0;
+        display: block;
+    }
+    
+    &__row {
+        display: flex;
+        @media screen and (min-width: $screen-tablet-small) {
+            width: 100%;
+        }
+
+    }
+    &__row:not(:last-child) {
+        margin-right: 15px;
+        @media screen and (min-width: $screen-tablet-small) {
+            margin-bottom: 30px;
+            margin-right: 0;
+        }
+    }
+    &__col {
+        display: flex;
+        @media screen and (min-width: $screen-tablet-small) {
+            display: block;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+
+    }
+    &__col:not(:last-child) {
+        @media screen and (min-width: $screen-tablet-small) {
+            margin-right: 30px;
+        }
+        
+
+    }
+    &__col--large {
+        @media screen and (min-width: $screen-tablet-small) {
+            flex-grow: 2;
+            flex-shrink: 1;
+            padding-bottom: 47.8%;
+        } 
+    }
+    &__col--medium {
+        @media screen and (min-width: $screen-tablet-small) {
+            flex-grow: 1;
+            flex-shrink: 2;
+            display: flex;
+            flex-direction: column;
+        } 
+    }
+    &__imege-wraper:not(:last-child) {
+        margin-right: 15px;
+        @media screen and (min-width: $screen-tablet-small) {
+            margin-right: 0;
+        }
+
+    }
+    &__col:not(:last-child) {
+        @media screen and (min-width: $screen-tablet-small){
+            margin-right: 30px;
+        }
+        
+
+    }
+    &__imege-wraper {
+        position: relative;
+        width: 312px;
+        height: 222px;
+        @media screen and (min-width: $screen-tablet-small) {
+            height: 0; 
+            width: auto;
+            background-color: $grey;
+        }
+    }
+    &__imege-wraper--small {
+        @media screen and (min-width: $screen-tablet-small) {
+            height: 50%;
+        }
+    }
+    &__imege-wraper--small:not(:last-child) {
+        @media screen and (min-width: $screen-tablet-small) {
+            margin-bottom: 30px;
+        }
+    }
+    &__imege-wraper--medium {
+        @media screen and (min-width: $screen-tablet-small) {
+            padding-bottom: 34.6%;
+        }
+        
+    }
+    
+    &__img {
+        @extend %image-absolute;
+        object-fit: cover;
+        transition: all .2s linear;
+    }
+    &__img:hover {
+        @media screen and (min-width: $screen-tablet-small) {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+        
+    }
+}

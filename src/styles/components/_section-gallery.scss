@@ -1,0 +1,24 @@
+.section-gallery {
+    background-color: $gallery-bg-color;
+    &__container {
+        @include flex(center, center ,column);
+        padding-top: 30px;
+    }
+    &__title {
+        font-size: $H800;
+        color: $text-main-color;
+        margin-bottom: 30px;
+    }
+    &__text {
+        font-size: $H200;
+        color: $text-main-color;
+        text-align: center;
+        max-width: 650px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+    &__button {
+        margin-bottom: 120px;
+        background-color: $gallery-btn-color;
+    }
+}
