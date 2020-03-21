@@ -1,12 +1,15 @@
 .section-services {
   @extend %section;
   background-color: $service-bg-color;
-  padding-top: 40px;
+  padding-top: 50px;
   @media screen and (min-width: $screen-desktop) {
+    padding-top: 200px;
   }
   &__container {
+    margin-bottom: 50px;
     @media screen and (min-width: $screen-desktop) {
       @include flex(space-between, center, row);
+      margin-bottom: 150px;
     }
   }
   &__content {
@@ -14,6 +17,7 @@
       @include flex(center, center, column);
       margin-right: 150px;
       max-width: 400px;
+      // margin-bottom: 150px;
     }
   }
 
@@ -53,7 +57,7 @@
       margin-bottom: 0;
       order: 2;
       width: 50%;
-      padding-bottom: 40%;
+      padding-bottom: 46%;
     }
   }
   &__title {

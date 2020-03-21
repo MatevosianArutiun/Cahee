@@ -6,6 +6,7 @@
     transition: all 0.2s linear;
     width: 90%;
     text-align: center;
+    display: block;
    
     @media screen and (min-width:$screen-desktop) {
         width: fit-content;

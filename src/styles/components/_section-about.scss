@@ -4,7 +4,7 @@
         @extend %section;
         @media screen and (min-width: $screen-desktop) {
             @include flex (space-between, center, row);
-            height: 100vh;
+            // height: 100vh;
         }
 
     }

@@ -1,0 +1,23 @@
+.section-blog {
+    background-color: $blog-bg-color;
+    &__container {
+        @include flex(center ,center ,column);
+        padding: 100px 24px 120px 24px;
+    }
+    &__tittle {
+        @include text($H900 ,600 ,$white);
+        padding-bottom: 46px;
+        
+    }
+    &__text {
+        @include text($H200 ,400 ,$white);
+        max-width: 570px;
+        text-align: center;
+        line-height: 1.6;
+        padding-bottom: 50px;
+    }
+    &__button {
+        background-color: $blog-btn-color;
+        
+    }
+}
