@@ -1,0 +1,29 @@
+.btn-up {
+    width:100px;
+    border:2px solid #ccc;
+    text-align:center;
+    padding:10px;
+    position:fixed;
+    bottom:50px;
+    right:50px;
+    cursor:pointer;
+    color:#B4B4B4;
+    font-family:verdana;
+    font-size:20px;
+    font-style: 18px;
+    font-weight: 900;
+    color: #fff;
+    background: rgba(52,51,56,0.4);
+    border: none;
+    width: 70px;
+    height: 70px;
+    margin: 20px auto;
+    border-radius: 50%;
+    padding-top: 22px;
+    text-decoration: none;
+    transition: all .5s linear;
+    }
+    .btn-up:hover {
+        background: rgba(52,51,56,0.7);
+        transform: scale(1.2);
+    }
