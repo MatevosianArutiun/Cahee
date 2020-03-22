@@ -19,7 +19,6 @@
         margin-bottom: 20px;
     }
     &__logo {
-        @include text ($H500 , 400 ,$grey);
         line-height: 1;
         margin-bottom: 20px;
     }
@@ -29,4 +28,26 @@
     &__author--marked {
         color: $blog-btn-color;
     }
+    &__logo-link {
+        @include text ($H500 , 400 ,$grey);
+        font-family: $logo-font;
+        transition: all .3s linear;
+        
+    }
+    &__logo-link:hover {
+        color: $gallery-bg-color;
+    }
+
+    &__logo-link::after {
+        display: block;
+        content: "";
+        height: 2px;
+        width: 0%;
+        background-color: $gallery-bg-color;
+        transition: width 0.5s ease-in-out;
+    }
+    &__logo-link:hover:after,
+    &__logo-link:focus:after {
+    width: 100%;
+    } 
 }
