@@ -1,14 +1,46 @@
 .section-subscribe {
     background-image: url(../images/bg-section-subscribe.png);
-    object-fit: cover;
-    object-position: right right;
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: bottom;
+    @media screen and (min-width: $screen-iphone) {
+        background-position-x: 100%;
+        background-position-y: bottom;
+        background-size: 150%;
+    }
+    @media screen and (min-width: $screen-iphone) {
+        background-position-x: 100%;
+        background-position-y: bottom;
+        background-size: 100%;
+    }
+    
+    @media screen and (min-width: $screen-desktop){
+        background-position-x: 130%;
+        background-position-y: top;
+        background-size: contain;
+        
+    }
     &__container {
-        padding-top: 140px;
-        padding-bottom: 150px;  
+        @include flex (center ,center , column);
+        padding-bottom: 100px;
+        padding-top: 50px;
+        text-align: center;
+        @media screen and (min-width: $screen-desktop) {
+            padding-top: 140px;
+            padding-bottom: 150px;
+            @include flex (center ,flex-start ,column);
+            text-align: start;
+        } 
     }
     &__tittle {
-        @include text ($H700 , 600 ,$text-main-color);
+        @include text ($H600 , 600 ,$text-main-color);
         margin-bottom: 35px;
+        @media screen and (min-width: $screen-desktop) {
+            @include text ($H700 , 600 ,$text-main-color);
+            
+        }
+        
     }
     &__text {
         @include text ($H200 , 400 ,$text-main-color);
@@ -16,11 +48,36 @@
         max-width: 570px;
     }
     &__form {
-        display: flex;
+        width: 100%;
+        @include flex (center ,center ,column);
+        text-align: center;
+        @media screen and (min-width: $screen-desktop) {
+            @include flex (center ,flex-start, row);
+            width: auto;
+        }
     }
     &__input {
-        width: 570px;
-        height: 55px;
+        width: 100%;
+        max-height: 55px;
+        border: 1px solid $text-main-color;
+        padding: 15px ;
+        font-size: $H50;
+        margin-bottom: 30px;
+        @media screen and (min-width: $screen-desktop) {
+        margin-bottom: 0;
         margin-right: 30px;
+        width: 570px;
+
+        }
+        
+        
+    }
+    &__button {
+        background-color: $subscribe-btn-color;
+        padding: 10px 43px;
+        width: 90%;
+        @media screen and (min-width: $screen-desktop) {
+            width: auto;
+        }
     }
 }

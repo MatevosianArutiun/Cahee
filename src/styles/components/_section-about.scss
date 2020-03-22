@@ -4,7 +4,7 @@
         @extend %section;
         @media screen and (min-width: $screen-desktop) {
             @include flex (space-between, center, row);
-            // height: 100vh;
+            
         }
 
     }
@@ -13,7 +13,8 @@
         width: 100%;
         @media screen and (min-width: $screen-desktop) {
             @include flex(center, center ,column);
-            height: 100vh;
+            // height: 100vh;
+            padding-bottom: 50%;
         }
     }
     &__imege {
@@ -22,7 +23,7 @@
       text-align: center;
       @media screen and (min-width: $screen-desktop) {
         @include flex(center, center ,column);
-        height: 100vh;
+        
         padding-left: 100px;
         text-align: start;
     }
