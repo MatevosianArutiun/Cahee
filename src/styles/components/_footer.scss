@@ -16,7 +16,6 @@
     }
     &__copyright {
         @include text ($H100 , 400 ,$grey);
-        margin-bottom: 20px;
     }
     &__logo {
         line-height: 1;

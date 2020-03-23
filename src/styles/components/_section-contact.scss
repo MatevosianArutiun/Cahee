@@ -27,11 +27,15 @@
     &__wrapper {
         width: 100%;
         @include flex (center ,center ,column);
+        @media screen and (min-width: $screen-desktop) {
+            @include flex (center ,flex-start ,row);
+        }
     }
     &__form-wrapper {
         width: 100%;
         @media screen and (min-width: $screen-desktop) {
             margin-right: 170px;
+            width: auto;
         }
     }
     &__form {
