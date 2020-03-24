@@ -33,21 +33,24 @@
         transition: all .3s linear;
         
     }
-    &__logo-link:hover {
-        color: $gallery-bg-color;
-    }
-
-    &__logo-link::after {
-        display: block;
-        content: "";
-        height: 2px;
-        width: 0%;
-        background-color: $gallery-bg-color;
-        transition: width 0.5s ease-in-out;
-    }
-    &__logo-link:hover:after,
-    &__logo-link:focus:after {
-    width: 100%;
+    @media screen and (min-width: $screen-desktop) {
+        &__logo-link:hover {
+            color: $gallery-bg-color;
+        }
     
-    } 
+        &__logo-link::after {
+            display: block;
+            content: "";
+            height: 2px;
+            width: 0%;
+            background-color: $gallery-bg-color;
+            transition: width 0.5s ease-in-out;
+        }
+        &__logo-link:hover:after,
+        &__logo-link:focus:after {
+        width: 100%;
+        
+        } 
+    }
+    
 }

@@ -1,7 +1,17 @@
 .scroll {
     position: absolute;
-    bottom: 1%;
+    bottom: 2%;
     left: 0; 
     right: 0; 
     margin: 0 auto;
+    display: block;
+    width: 24px;
+    transition: all .3s linear;
+    &:hover {
+        @media screen and (min-width:$screen-desktop) {
+            bottom: 1%;
+        }
+        
+    }
+    
 }

@@ -26,7 +26,10 @@
     text-decoration: none;
     transition: all .5s linear;
     &:hover {
-        background: rgba(52,51,56,0.7);
-        transform: scale(1.2);
+        @media screen and (min-width: $screen-desktop) {
+            background: rgba(52,51,56,0.7);
+            transform: scale(1.2);
+        }
+        
     }
       }
