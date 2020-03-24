@@ -7,11 +7,21 @@
     display: block;
     width: 24px;
     transition: all .3s linear;
-    &:hover {
-        @media screen and (min-width:$screen-desktop) {
-            bottom: 1%;
-        }
-        
+    @media screen and (min-width: $screen-tablet) {
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-name: bounce-1;
+        animation-timing-function: linear;
     }
+
+    @media screen and (min-width: $screen-tablet) {
+        @keyframes bounce-1 {
+            0%   { transform: translateY(0); }
+            50%  { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+    }
+    
+    
     
 }
