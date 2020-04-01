@@ -73,6 +73,12 @@
   &__input::placeholder {
     color: $white;
   }
+  &__input:invalid:not(:placeholder-shown) {
+    border-left: 3px solid $blog-btn-color;
+    background-color: $blog-btn-color;
+    opacity: 0.5;
+  }
+  
   &__textarea {
       resize: none;
     margin-bottom: 15px;
@@ -91,9 +97,16 @@
       height: 250px;
     }
   }
-  &__textarea:focus {
+  
+  &__textarea:invalid:not(:placeholder-shown) {
+    border-left: 3px solid $blog-btn-color;
+    background-color: $blog-btn-color;
+    opacity: 0.5;
+  }
+  &__textarea:valid {
     opacity: 1;
-    border-left: 3px solid $input-border-color;
+    border-left: 3px solid $contact-bg-color;
+    
   }
   &__textarea::placeholder {
     @include text($H100, 500, $white);
